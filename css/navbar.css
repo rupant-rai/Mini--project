@@ -1,0 +1,60 @@
+/* Navbar */
+.navbar {
+    position: fixed; /* Fixes the navbar at the top */
+    top: 0; /* Ensures it sticks to the top */
+    left: 0;
+    height: 30px;
+    width: 100%; /* Spans the entire width of the page */
+    z-index: 1000; /* Places it above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+
+
+/* Center the navigation links */
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between links */
+    margin: 0 auto; /* Center the links */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar .nav-links li {
+    display: inline;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.navbar .nav-links a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Profile Section */
+.profile-section {
+    margin-left: auto; /* Pushes it to the right side */
+    cursor: pointer;
+}
+
+.profile-section img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Ensure Profile Icon Always Visible */
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}

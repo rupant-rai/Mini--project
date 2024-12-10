@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post-Surgery Emotional Recovery Tracker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="tracker.html">Tracker</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <!-- Login and Sign Up Buttons -->
+        <div class="auth-buttons">
+            <button id="navbar-login-btn">Login</button>
+            <button id="navbar-signup-btn">Sign Up</button>
+        </div>
+    </nav>
+
+    <!-- Video Slider -->
+    <div class="slider">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <div class="video-container">
+            <video id="video1" class="active" muted autoplay loop>
+                <source src="assets/videos/video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video id="video2" muted autoplay loop>
+                <source src="assets/videos/video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video id="video3" muted autoplay loop>
+                <source src="assets/videos/video3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- Login and Signup Buttons -->
+    <div class="auth-buttons">
+        <button id="slider-login-btn">Login</button>
+        <button id="slider-signup-btn">Sign Up</button>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features">
+        <h2>Our Features</h2>
+        <div class="features-list">
+            <div class="feature-item">
+                <h3>Track Your Emotions</h3>
+                <p>Monitor your emotional well-being daily and visualize your progress.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Write Your Journey</h3>
+                <p>Document your recovery journey and share your experiences with others.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Stay Connected</h3>
+                <p>Share your progress with loved ones or healthcare professionals.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Forms -->
+    <div id="login-form-container" class="form-container hidden">
+        <div class="form-content">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" required>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" required>
+                <button type="submit">Login</button>
+            </form>
+            <button class="close-btn" id="close-login-btn">Close</button>
+        </div>
+    </div>
+
+    <div id="signup-form-container" class="form-container hidden">
+        <div class="form-content">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" required>
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" required>
+                <label for="signup-confirm-password">Confirm Password:</label>
+                <input type="password" id="signup-confirm-password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <button class="close-btn" id="close-signup-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Post-Surgery Emotional Recovery Tracker. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+
+</body>
+</html>

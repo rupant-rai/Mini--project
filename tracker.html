@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Tracker</title>
+    <link rel="stylesheet" href="css/tracker.css">
+    <link rel="stylesheet" href="css/navbar.css"> 
+    <link rel="stylesheet" href="css/profile-sidebar.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tracker.html" class="active">Tracker</a></li>
+            <li><a href="journal.html" >Journey</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="profile-section">
+            <img src="assets/profile-icon.png" alt="Profile" id="profile-icon">
+        </div>
+    </nav>
+    
+    <!-- Sidebar -->
+    <div id="profile-sidebar" class="sidebar">
+        <ul>
+            <li><a href="#">Your Report</a></li>
+            <li><a href="#">Your History</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Details</a></li>
+            <li><a href="#">Privacy & Security</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+
+
+    <!-- Tracker Page Layout -->
+    <div class="tracker-container">
+        <!-- Chatbot Section -->
+        <div class="chatbot-section">
+            <h2>Chat Support</h2>
+            <div class="chatbot-placeholder">
+                <!-- Placeholder for ChatGPT-powered chatbot -->
+                <p>Chatbot coming soon...</p>
+            </div>
+        </div>
+
+        <!-- Emotion Tracking Section -->
+        <div class="emotion-tracker-section">
+            <h2>Emotion Tracker</h2>
+        
+            <!-- Daily Emotion Input -->
+            <div class="emotion-input">
+                <label for="emotion-scale">Rate Your Emotion Today (1-10):</label>
+                <input type="range" id="emotion-scale" name="emotion-scale" min="1" max="10" value="5" oninput="updateEmotionValue(this.value)">
+                <span id="emotion-value">5</span>
+            </div>
+        
+            <!-- New Date and Tracking Details -->
+            <div class="tracking-details">
+                <label for="tracking-date">Select Date:</label>
+                <input type="date" id="tracking-date" name="tracking-date">
+        
+                <label for="emotion-day">Emotion on that Day:</label>
+                <input type="text" id="emotion-day" name="emotion-day" placeholder="Describe your emotion">
+        
+                <label for="pain-level">Pain Level (1-10):</label>
+                <input type="number" id="pain-level" name="pain-level" min="1" max="10" placeholder="Enter pain level">
+                
+                <button id="add-record">Add to Record</button>
+            </div>
+
+            <button id="renew-chart">Renew Chart</button>
+
+        
+            <!-- Data Visualization -->
+            <div class="data-visualization">
+                <h3>Your Emotional Trends</h3>
+                <select id="chart-type">
+                    <option value="line">Line Chart</option>
+                    <option value="bar">Bar Chart</option>
+                    <option value="pie">Pie Chart</option>
+                </select>
+                <canvas id="emotionChart" width="400" height="200"></canvas>
+            </div>
+        
+            <!-- <div class="sentiment-analysis">
+                <h3>Sentiment Analysis</h3>
+                <label for="feeling-input">How are you feeling today?</label>
+                <textarea id="feeling-input" rows="4" placeholder="Write your feelings here..."></textarea>
+                <button id="analyze-sentiment">Analyze</button>
+                <p id="sentiment-summary">Your sentiment analysis will appear here based on your input.</p>
+                <p id="exercise-suggestion">Mindfulness exercises will be suggested here.</p>
+            </div> -->
+
+            <div class="container">
+                <h1 class="header">Sentiment Analysis App</h1>
+                <textarea id="textarea" class="textarea" placeholder="Enter your thoughts and feelings..."></textarea>
+                <button id="button" class="button">Analyze Sentiment</button>
+                <div id="result" class="result">
+                  <h2 id="sentiment" class="sentiment"></h2>
+                  <ul id="suggestions" class="suggestions"></ul>
+                  <h2 id="exercises-header" class="exercises">Exercises:</h2>
+                  <ul id="exercises" class="exercises"></ul>
+                </div>
+            </div>
+
+            <!-- Download Report Button -->
+            <button id="download-Report">Download Report</button>
+
+
+        </div>
+        
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/tracker.js"></script>
+    <script src="js/profile-sidebar.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sentiment@5.1.0"></script> -->
+    <script src="js/sentiment-analysis.js"></script>
+    <script src="js/chart.js"></script>
+
+</body>
+</html>

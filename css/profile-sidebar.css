@@ -1,0 +1,53 @@
+/* Sidebar Styles */
+
+#profile-icon{
+    margin-right: 30px;
+}
+.sidebar {
+    position: fixed;
+    top: 60px; /* Adjust this value to match your navbar's height */
+    right: -250px; /* Hidden off-screen initially */
+    width: 250px;
+    height: calc(100% - 60px); /* Full height minus navbar */
+    background-color: #333;
+    color: white;
+    transition: 0.3s ease-in-out;
+    padding-top: 20px;
+    z-index: 1000;
+    overflow-y: auto; /* Allows scrolling if content exceeds viewport */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
+
+/* Active Sidebar */
+.sidebar.active {
+    right: 0;
+}
+
+/* Adjusted Navbar to Not Overlap */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1100; /* Above the sidebar */
+}

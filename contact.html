@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/navbar.css"> 
+    <link rel="stylesheet" href="css/profile-sidebar.css"> 
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tracker.html">Tracker</a></li>
+            <li><a href="journal.html" >Journey</a></li>
+            <li><a href="contact.html" class="active" >Contact</a></li>
+        </ul>
+        <div class="profile-section">
+            <img src="assets/profile-icon.png" alt="Profile" id="profile-icon">
+        </div>
+    </nav>
+    
+    <!-- Sidebar -->
+    <div id="profile-sidebar" class="sidebar">
+        <ul>
+            <li><a href="#">Your Report</a></li>
+            <li><a href="#">Your History</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Details</a></li>
+            <li><a href="#">Privacy & Security</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Contact Page Layout -->
+    <div class="contact-container">
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p><strong>Address:</strong> G.L. BAJAJ INSTITUTE OF TECHNOLOGY AND MANAGEMENT, KNOWLDEGE PARK 2, GREATER NOIDA.</p>
+            <p><strong>Phone:</strong> 9962621762</p>
+            <p><strong>Email:</strong> CSEWS2221@GLBITM.AC.IN</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3507.2679810208306!2d77.48711577549491!3d28.471475175753067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgl%20bajaj%20institute%20of%20technology%20and%20management!5e0!3m2!1sen!2sin!4v1731867481751!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/contact.js"></script>
+    <script src="js/profile-sidebar.js"></script>
+</body>
+</html>

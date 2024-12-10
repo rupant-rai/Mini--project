@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey Journal</title>
+    <link rel="stylesheet" href="css/journal.css">
+    <link rel="stylesheet" href="css/navbar.css"> 
+    <link rel="stylesheet" href="css/profile-sidebar.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tracker.html">Tracker</a></li>
+            <li><a href="journal.html" class="active">Journey</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="profile-section">
+            <img src="assets/profile-icon.png" alt="Profile" id="profile-icon">
+        </div>
+    </nav>
+    
+    <!-- Sidebar -->
+    <div id="profile-sidebar" class="sidebar">
+        <ul>
+            <li><a href="#">Your Report</a></li>
+            <li><a href="#">Your History</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Details</a></li>
+            <li><a href="#">Privacy & Security</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+    
+        
+    <!-- Journal Page Layout -->
+    <div class="journal-container">
+        <!-- Journal Input Section -->
+        <div class="journal-input">
+            <h2>Share Your Journey</h2>
+            <textarea id="journal-entry" placeholder="Write your journey here..." rows="10"></textarea>
+            <button id="save-journal-btn">Save Entry</button>
+        </div>
+
+        <!-- Display User's Journal Entries -->
+        <div class="journal-entries">
+            <h2>Your Entries</h2>
+            <div id="entries-container">
+                <p>No entries yet. Start writing your journey!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/journal.js"></script>
+    <script src="js/profile-sidebar.js"></script>
+</body>
+</html>
