@@ -102,36 +102,6 @@ function displayRecords() {
 // Event Listener for Chart Type Change
 document.getElementById('chart-type').addEventListener('change', updateChart);
 
-// Function to generate a PDF report
-// function generatePDF() {
-//     const { jsPDF } = window.jspdf;
-//     const doc = new jsPDF();
-
-//     // Title for the document
-//     doc.setFontSize(16);
-//     doc.text('Emotion Tracker Report', 20, 20);
-    
-//     // Column headers for the table
-//     const headers = ['Date', 'Emotion', 'Pain Level'];
-    
-//     // Add the headers to the PDF
-//     doc.setFontSize(12);
-//     doc.autoTable({
-//         head: [headers],
-//         body: records.map(record => [record.date, record.emotion, record.pain]),
-//         startY: 30,
-//         theme: 'grid'
-//     });
-    
-//     // Save the PDF with a file name
-//     doc.save('emotion_tracker_report.pdf');
-//}
-
-// Event Listener for the "Download Report" Button
-//document.getElementById('download-Report').addEventListener('click', generatePDF);
-
-
-
 // function to generate csv file
 
 
